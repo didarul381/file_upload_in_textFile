@@ -29,7 +29,7 @@ move_uploaded_file($tem_dir,$my_dir);
 
 $fp=fopen($rpath_of_file,'a');
 // fwrite($fp,"$_POST,\n");
-fwrite($fp,"\n {$name},\n {$email},\n {$phone},\n {$my_dir}");
+fwrite($fp,"{$name},{$email}, {$phone},{$my_dir}\n");
 $data=file_get_contents($rpath_of_file);
  $adata=explode(",",$data);
 print_r($adata);
